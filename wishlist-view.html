@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>MyWishList</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/store.js"></script>
+		<script type="text/javascript" src="scripts/wishlist.js"></script>
+		<!--<script type="text/javascript" src="scripts/main.js"></script>-->
+		<!--<script type="text/javascript" src="scripts/test.js"></script>-->
+		<script type="text/javascript" src="scripts/source.js"></script>
+	</head>
+	<body>
+		
+		<!--<img id="preview1" crossorigin="anonymous" src="images/1.jpg">-->
+
+		<div id="header">
+			<div style="float: left; display:inline-block;">
+				<h2 style="font-family:'Trebuchet MS';font-size: 26px; margin:0.45em;">Mimity <span style="color: #428BCA;">Online Shop</span></h2>
+				<h4 style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;margin: 0.25em;">Lorem Ipsum dolor sit amet.</h4>
+			</div>
+			
+			<div style="display: inline-block;float: right;margin-left: 0.5em;padding: 1.5em 0">
+				<input type="text" size="40px;" style="margin:0;" placeholder="Enter something to search" /><span id="search">search</span>
+				<!--<select style="padding:0.3em 0.5em;margin:0; vertical-align: top;">
+					<option value="0">Shopping Cart : 2 item(s)</option>
+				</select>-->
+			</div>
+		</div>
+		
+		<div id="menu">
+			<ul style="max-width:75%;margin:0 auto;">
+				<li class="menulist"><a href="index.html">HOME</a></li>
+				<li class="menulist"><a href="wishlists.html">WISHLISTS</a></li>
+				<!--<li class="menulist"><a href="#">SHOPPING CART</a></li>
+				<li class="menulist"><a href="#">CHECK OUT</a></li>
+				<li class="menulist"><a href="#"><select style="background-color: #4a4a4a;color:#FFF;border: none;"><option value="0">PAGES</option></select></a></li>-->
+			</ul>
+		</div>
+		<div id="body">
+				
+				<div id="wishlist"></div>
+
+				<!--<div class="items" style="text-align:left;padding:2em 4em; border-bottom:1px solid #696969;">
+					<p style="display:inline;"><img src="images/1.jpg" height="150vh" style="border-bottom: 1px solid #CCC;margin-top:1em;vertical-align:top;"/></p>
+					<div style="display:inline-block;margin-left:1em;">
+					<h4 style="color:#428BCA;font-family: Arial, Helvetica, sans-serif;">Funkalicious Print T-Shirt</h4>
+					<p style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit. Aut,<br />minima!</p>					
+					</div>
+				</div>-->
+					
+				
+				<script type="text/javascript">
+
+					function getItems(wishlist){
+						var wishListItems = [];
+						for (var i = 0; i < wishlist.itemIds.length; i++) {
+							
+							for (var j = 0; j < data.length; j++) {
+								if(wishlist.itemIds[i] == data[j].itemID){
+									var imgSrc = data[j].image;
+									var itemID = data[j].itemID;
+									wishListElements(imgSrc, itemID);
+								}
+							}
+						}
+					};
+
+					function wishListElements(imageSource, itemID){
+						var listDiv = document.createElement("div");
+						listDiv.className = "list";
+						$(listDiv).css("min-width","30%");
+						$(listDiv).css("display","inline-block");
+						$(listDiv).css("margin","1em 0");
+						$(listDiv).css("padding","0 0.5em");
+
+						var itemsDiv = document.createElement("div");
+						itemsDiv.className = "items";
+						$(itemsDiv).css("text-align","center");
+						$(itemsDiv).css("border","1px solid #CCC");
+
+						var firstPara = document.createElement("p");
+						var secPara = document.createElement("p");
+						var thirdPara = document.createElement("p");
+
+						$(firstPara,secPara,thirdPara).css("font-size","12px");
+						$(firstPara,secPara,thirdPara).css("font-family","Arial,Helvetica, sans-serif");
+
+						var image = document.createElement("img");
+						image.src = "data:image/png;base64," + imageSource;
+						$(image).css("height","150px");
+						$(image).css("border-bottom","1px solid #CCC");
+
+						var h4 = document.createElement("h4");
+						$(h4).css("color","#428BCA");
+						$(h4).css("font-family","Arial, Helvetica, sans-serif");
+						$(h4).append("Funkalicious Print T-Shirt");
+
+						var inputHid = document.createElement("input");
+						inputHid.className = "itemIdValue";
+						inputHid.type = "hidden";
+						inputHid.value = itemID;
+
+						// var button = document.createElement("button");
+						// button.className = "addToWishList";
+						// $(button).append("Add to wishlist");
+
+						$(secPara).append("Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit. Aut,<br />minima!");
+
+						$(firstPara).append(image);
+						// $(thirdPara).append(input);
+						// $(thirdPara).append(button);
+						$(thirdPara).append(inputHid);
+
+						$(itemsDiv).append(firstPara);
+						$(itemsDiv).append(h4);
+						$(itemsDiv).append(secPara);
+						$(itemsDiv).append(thirdPara);
+
+						$(listDiv).append(itemsDiv);
+						// $(".row").append(listDiv);
+						$("#body").append(listDiv);
+
+					}
+
+					$(document).ready(function(){
+						$("#wishlist").html(wishlists[localStorage["wishlist"]].wishListName + " " + "Wishlist");		
+						getItems(wishlists[localStorage["wishlist"]]);
+					});
+
+				</script>
+		
+		</div>
+
+	
+
+	</body>
+</html>

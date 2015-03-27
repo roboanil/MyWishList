@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>MyWishList</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/store.js"></script>
+		<script type="text/javascript" src="scripts/wishlist.js"></script>
+		<!--<script type="text/javascript" src="scripts/main.js"></script>-->
+		<!--<script type="text/javascript" src="scripts/test.js"></script>-->
+		<script type="text/javascript" src="scripts/source.js"></script>
+	</head>
+	<body>
+		
+		<!--<img id="preview1" crossorigin="anonymous" src="images/1.jpg">-->
+
+		<div id="header">
+			<div style="float: left; display:inline-block;">
+				<h2 style="font-family:'Trebuchet MS';font-size: 26px; margin:0.45em;">Mimity <span style="color: #428BCA;">Online Shop</span></h2>
+				<h4 style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;margin: 0.25em;">Lorem Ipsum dolor sit amet.</h4>
+			</div>
+			
+			<div style="display: inline-block;float: right;margin-left: 0.5em;padding: 1.5em 0">
+				<input type="text" size="40px;" style="margin:0;" placeholder="Enter something to search" /><span id="search">search</span>
+				<!--<select style="padding:0.3em 0.5em;margin:0; vertical-align: top;">
+					<option value="0">Shopping Cart : 2 item(s)</option>
+				</select>-->
+			</div>
+		</div>
+		
+		<div id="menu">
+			<ul style="max-width:75%;margin:0 auto;">
+				<li class="menulist"><a href="index.html">HOME</a></li>
+				<li class="menulist"><a href="wishlists.html">WISHLISTS</a></li>
+				<!--<li class="menulist"><a href="#">SHOPPING CART</a></li>
+				<li class="menulist"><a href="#">CHECK OUT</a></li>
+				<li class="menulist"><a href="#"><select style="background-color: #4a4a4a;color:#FFF;border: none;"><option value="0">PAGES</option></select></a></li>-->
+			</ul>
+		</div>
+		<div id="body">
+			
+				<div>My WishLists</div>			
+
+				<!--<form action="wishlist-view.html">
+				    <input type="submit" value="Go to Google">
+				</form>-->
+
+				<script type="text/javascript">
+
+					function loadLists(){
+						for (var i = 0; i < wishlists.length; i++) {
+
+							// var form = document.createElement("form");
+							// form.action = "wishlist-view.html";
+
+							// var input = document.createElement("input");
+							// input.type = "submit";
+							// input.value = wishlists[i].wishListName;
+
+							// $(form).append(input);
+							// $("#body").append(form);
+
+							var btn = document.createElement("button");
+							btn.type = "submit";
+							btn.value = i;
+							btn.innerHTML = wishlists[i].wishListName;
+							$("#body").append(btn);
+						};
+					};
+
+					$(document).ready(function(){
+
+						loadLists();
+
+					});
+
+					$(document).on("click","button", function(){
+						// wishListSelected = $(this).val();
+						localStorage.setItem('wishlist', $(this).val());
+						console.log(wishListSelected);
+						window.location = "wishlist-view.html";
+					});
+
+				</script>
+		
+		</div>
+
+	
+
+	</body>
+</html>

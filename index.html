@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>MyWishList</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/store.js"></script>
+		<script type="text/javascript" src="scripts/wishlist.js"></script>
+		<!--<script type="text/javascript" src="scripts/main.js"></script>-->
+		<!--<script type="text/javascript" src="scripts/test.js"></script>-->
+		<script type="text/javascript" src="scripts/source.js"></script>
+	</head>
+	<body>
+		
+		<!--<img id="preview1" crossorigin="anonymous" src="images/1.jpg">-->
+
+		<div id="header">
+			<div style="float: left; display:inline-block;">
+				<h2 style="font-family:'Trebuchet MS';font-size: 26px; margin:0.45em;">Mimity <span style="color: #428BCA;">Online Shop</span></h2>
+				<h4 style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;margin: 0.25em;">Lorem Ipsum dolor sit amet.</h4>
+			</div>
+			
+			<div style="display: inline-block;float: right;margin-left: 0.5em;padding: 1.5em 0">
+				<input type="text" size="40px;" style="margin:0;" placeholder="Enter something to search" /><span id="search">search</span>
+				<!--<select style="padding:0.3em 0.5em;margin:0; vertical-align: top;">
+					<option value="0">Shopping Cart : 2 item(s)</option>
+				</select>-->
+			</div>
+		</div>
+		
+		<div id="menu">
+			<ul style="max-width:75%;margin:0 auto;">
+				<li class="menulist"><a href="index.html">HOME</a></li>
+				<li class="menulist"><a href="wishlists.html">WISHLISTS</a></li>
+				<!--<li class="menulist"><a href="#">SHOPPING CART</a></li>
+				<li class="menulist"><a href="#">CHECK OUT</a></li>
+				<li class="menulist"><a href="#"><select style="background-color: #4a4a4a;color:#FFF;border: none;"><option value="0">PAGES</option></select></a></li>-->
+			</ul>
+		</div>
+		<div id="body">
+			<div id="topcontainer">
+			<div id="nirvana">
+				<div id="controls"></div>
+				<div id="nirvana_content">
+						<h2 style="font-size: 42px;color: #000;margin:0.15em;font-family: Arial, Helvetica, sans-serif;">ADIPISICIN</h2>
+						<h3 style="color: #FFF; font-size: 32px;font-weight:bold;margin: 0.1em;font-family: arial;">COLLECTION</h3>
+						<p style="font-size: 10px;line-height:1.5em; text-align:justify;color: #696969;margin-top: 0.25em;font-family: arial;">VITAE DIAM UT PURUS LUCTUS FACILISIS, NULLAM AT LECTUSEL NON EROS TRISTIQUE ULTRICE, DUIS QUIS IMPERDIET ESTERT SED LOBORTIS ULTRICES ALIQUET</p>
+				</div>
+			</div>
+			<div style="min-width:26%;display:inline-block;margin:0 1em;">
+					<div class="items">
+								<p><img src="images/1.jpg" height="150vh"/></p>
+								<h4>Funkalicious Print T-Shirt</h4>
+								<p>Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit. Aut,<br />minima!</p>
+								<p><label class="addToWishList" >New Item</label><input class="itemIdValue" type="hidden" value="121"></input></p>
+					</div>
+			</div>
+		</div>
+		<div id="products">
+			<div id="leftcontainer">
+				<h2 style="color:#428BCA; font-family:Arial, Helvetica, sans-serif;font-size: 26px;border-bottom:2px solid #CCC;padding-bottom: 0.75em;">CATEGORIES</h2>
+				<ul class="categories" style="margin-top: 1em;">
+					<li><a href="#">Cras justo odio</a></li>
+					<li><a href="#">Dapibus ac facilisis in</a></li>
+					<li><a href="#">Morbi leo risus</a></li>
+					<li><a href="#">Porta ac consectetur ac</a></li>
+					<li><a href="#">Vestibulum at eros</a></li>
+					<li><a href="#">Cras justo odio</a></li>
+					<li><a href="#">Dapibus ac facilisis in</a></li>
+					<li><a href="#">Morbi leo risus</a></li>
+					<li><a href="#">Porta ac consectetur ac</a></li>
+					<li><a href="#">Vestibulum at eros</a></li>
+					<li><a href="#">Cras justo odio</a></li>
+					<li><a href="#">Dapibus ac facilisis in</a></li>
+				</ul>
+				<br />
+				<!--<h2 style="color:#428BCA; font-family:Arial, Helvetica, sans-serif;font-size: 26px;border-bottom:2px solid #CCC;padding-bottom: 0.75em;">BEST SELLER</h2>
+				<div class="items">
+								<p><img src="images/1.jpg" height="150vh"/></p>
+								<h4>Funkalicious Print T-Shirt</h4>
+								<p>Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit. Aut,<br />minima!</p>
+								<p><input placeholder="$ 928.96" /><button class="btn" > Buy</button></p>
+				</div>
+				<div class="items" style="margin-top: 1em;">
+								<p><img src="images/1.jpg" height="150vh"/></p>
+								<h4>Funkalicious Print T-Shirt</h4>
+								<p>Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit. Aut,<br />minima!</p>
+								<p><input placeholder="$ 928.96" /><button class="btn" > Buy</button></p>
+				</div>-->
+			</div>
+			<div id="rightcontainer">
+				<h2 style="color:#428BCA; font-family:Arial, Helvetica, sans-serif;font-size: 26px;border-bottom:2px solid #CCC;padding-bottom: 0.75em;">FEATURED PRODUCTS</h2>
+				<div class="row">
+					<p id="notify" style="text-align:center;">Your selected item has been added to Wish List</p>
+					
+				</div>
+								
+			</div>
+		</div>
+		</div>
+
+		<div class="blur-mask"></div>
+
+		<div class="popup-window">
+			<div>
+				<div class="wishlist-list">
+
+					<div class="labelSelect">Select wishlist</div>
+					<select class="btn-default">
+					  <option value="0">Main</option>
+					</select>					
+
+				</div>
+				<div class="add-wishlist" title="Add new wishlist">					
+					<span><i class="fa fa-plus"></i></span>
+				</div>
+
+				<div class="new-wishlist-input">
+					<input class="newWishlistName" type="text" placeholder="Name of the wishlist"/>
+					<button class="btn-default" id="addNewWishlist">0k</button>
+				</div>
+
+			</div>
+
+			<div class="close-popup">
+				<span><i class="fa fa-times"></i></span>
+			</div>
+
+			<div class="wishlist-item-display">
+				<div class="items">
+					<p><img id="itemDisp" src="images/1.jpg" height="150vh"/></p>
+					<h4>Funkalicious Print T-Shirt</h4>
+					<p>Lorem ipsum dolor sit amet,<br />consectetur adipisicing elit. Aut,<br />minima!</p>
+				</div>
+			</div>
+
+			<div class="add-item-wishlist" title="Add item to list">
+				<span><i class="fa fa-plus"></i></span>
+			</div>
+
+		</div>
+
+	</body>
+</html>
